@@ -3,14 +3,10 @@ import { Providers } from '@/app/providers'
 import { Inter } from 'next/font/google'
 import "@/styles/globals.css";
 
-import path from "path";
-import fsPromises from "fs/promises";
-import {InformationProps, ProjectProps, WorkExperienceProps} from "@/types";
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Lee Ju Hyeong',
+  title: 'Generalist Software Engineer',
   description: 'Generalist Software Engineer',
 }
 
