@@ -16,11 +16,12 @@ jobs:
   # Build job
   build:
     runs-on: [ self-hosted ]
+    defaults: 
+      run: 
+        working-directory: ~/test/Blog_Nextjs14
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Copy Work to Nginx
-        run: sudo cp -r ~/actions-runner/_work/Blog_Nextjs14/Blog_Nextjs14 /var/www/smilebank7/
+      - name: Checkout test
+        run: sudo git pull origin main
       - name: run
-        run: cd /var/www/smilebank7/Blog_Nextjs14 && sudo yarn install && sudo yarn build
+        run: sudo yarn install && sudo yarn build
 
