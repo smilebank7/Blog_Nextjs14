@@ -21,10 +21,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Copy Work to Nginx
         run: sudo cp -r ~/actions-runner/_work/Blog_Nextjs14/Blog_Nextjs14 /var/www/smilebank7/
-      - name: Move to Nginx
-        run: cd /var/www/smilebank7/Blog_Nextjs14
-      - name: Check Dependencies
-        run: yarn install
-      - name: Build NextJS in Yarn
-        run: yarn build
-  
+      - name: run
+        run: cd /var/www/smilebank7/Blog_Nextjs14 && sudo yarn install && sudo yarn build
+
