@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Generalist Software Engineer',
+  title: '이주형, Lee Ju Hyeong',
   description: 'Generalist Software Engineer',
 }
 
