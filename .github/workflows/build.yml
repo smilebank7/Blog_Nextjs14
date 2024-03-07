@@ -20,9 +20,9 @@ jobs:
       - name: Checkout
         env: 
           NGINX_PATH : ${{ secrets.NGINX_PATH }}
-        run: cd NGINX_PATH && sudo git fetch --all && sudo git reset --hard origin/main && sudo git pull origin main
+        run: cd env.NGINX_PATH && sudo git fetch --all && sudo git reset --hard origin/main && sudo git pull origin main
       - name: build files
         env: 
             NGINX_PATH : ${{ secrets.NGINX_PATH }}
-        run: cd NGINX_PATH && sudo yarn install && sudo yarn build
+        run: cd env.NGINX_PATH && sudo yarn install && sudo yarn build
 
