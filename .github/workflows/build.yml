@@ -17,8 +17,12 @@ jobs:
   build:
     runs-on: [ self-hosted ]
     steps:
-      - name: Checkout test
-        run: cd /var/www/Blog_Nextjs14 && sudo git fetch --all && sudo git reset --hard origin/main && sudo git pull origin main
-      - name: run
-        run: cd /var/www/Blog_Nextjs14 && sudo yarn install && sudo yarn build
+      - name: Checkout
+        env: 
+          NGINX_PATH : ${{ secrets.NGINX_PATH }}
+        run: cd NGINX_PATH && sudo git fetch --all && sudo git reset --hard origin/main && sudo git pull origin main
+      - name: build files
+        env: 
+            NGINX_PATH : ${{ secrets.NGINX_PATH }}
+        run: cd NGINX_PATH && sudo yarn install && sudo yarn build
 
